@@ -1,5 +1,12 @@
 #! /usr/bin/env bash
 
+# Test to see if $ZNCDATA is writable 
+if [ ! -w "${ZNCDATA}" ]; then
+  ZNCDATA=/var/tmp/znc-data
+  export ZNCDATA
+  mkdir ${ZNCDATA}
+fi
+
 # Create znc config if it doesn't exist
 if [ ! -f "${ZNCDATA}/configs/znc.conf" ]; then
   mkdir "${ZNCDATA}/configs"

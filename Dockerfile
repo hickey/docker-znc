@@ -1,6 +1,6 @@
 # znc
 #
-# VERSION               1.1.1
+# VERSION               1.2.0
 # DOCKER-VERSION        0.6.1
 
 FROM       ubuntu:12.04
